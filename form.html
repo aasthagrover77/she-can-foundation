@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>She Can Foundation</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+
+      /* Women Empowerment Background */
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.55)),
+        url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+
+      /* Glassmorphism */
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      padding: 40px;
+      border-radius: 25px;
+
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+      animation: fadeIn 1s ease;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #f1f1f1;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: none;
+      outline: none;
+      border-radius: 12px;
+      font-size: 16px;
+
+      background: rgba(255, 255, 255, 0.85);
+
+      transition: 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      transform: scale(1.02);
+      box-shadow: 0 0 12px rgba(255, 79, 139, 0.4);
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 14px;
+
+      background: #ff4f8b;
+      color: white;
+
+      font-size: 17px;
+      font-weight: 600;
+
+      cursor: pointer;
+      transition: 0.3s;
+
+      box-shadow: 0 8px 20px rgba(255, 79, 139, 0.3);
+    }
+
+    button:hover {
+      background: #e63c78;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 25px rgba(255, 79, 139, 0.5);
+    }
+
+    #success-message {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 18px;
+
+      animation: fadeIn 0.5s ease;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      color: #eee;
+      font-size: 14px;
+    }
+
+    /* Animation */
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+
+    @media (max-width: 600px) {
+
+      .container {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>She Can Foundation</h1>
+
+    <p class="subtitle">
+      Empowering Women Through Opportunities 💖
+    </p>
+
+    <!-- Form -->
+
+    <form id="contactForm">
+
+      <div class="input-group">
+        <input type="text" placeholder="Enter Your Name" required>
+      </div>
+
+      <div class="input-group">
+        <input type="email" placeholder="Enter Your Email" required>
+      </div>
+
+      <div class="input-group">
+        <textarea placeholder="Enter Your Message" required></textarea>
+      </div>
+
+      <button type="submit">
+        Submit
+      </button>
+
+    </form>
+
+    <!-- Success Message -->
+
+    <div id="success-message">
+      Form Submitted Successfully 🎉
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+      © 2026 She Can Foundation | Designed with ❤️
+    </footer>
+
+  </div>
+
+  <!-- JavaScript -->
+
+  <script>
+
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function (event) {
+
+      event.preventDefault();
+
+      successMessage.style.display = "block";
+
+      form.reset();
+
+    });
+
+  </script>
+
+</body>
+
+</html>
